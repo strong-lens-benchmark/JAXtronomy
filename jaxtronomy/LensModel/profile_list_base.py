@@ -26,6 +26,7 @@ _JAXXED_MODELS = [
     "NIE",
     "PJAFFE",
     "PJAFFE_ELLIPSE_POTENTIAL",
+    "SERSIC_ELLIPSE_POTENTIAL",
     "SHEAR",
     "SIE",
     "SIS",
@@ -661,12 +662,12 @@ def lens_class(
     #     )
 
     #     return SersicEllipseKappa(**profile_kwargs)
-    # elif lens_type == "SERSIC_ELLIPSE_POTENTIAL":
-    #     from lenstronomy.LensModel.Profiles.sersic_ellipse_potential import (
-    #         SersicEllipsePotential,
-    #     )
+    elif lens_type == "SERSIC_ELLIPSE_POTENTIAL":
+        from jaxtronomy.LensModel.Profiles.sersic_ellipse_potential import (
+            SersicEllipsePotential,
+        )
 
-    #     return SersicEllipsePotential(**profile_kwargs)
+        return SersicEllipsePotential(**profile_kwargs)
     # elif lens_type == "SHAPELETS_CART":
     #     from lenstronomy.LensModel.Profiles.shapelet_pot_cartesian import (
     #         CartShapelets,
